@@ -69,6 +69,7 @@
     transition: background 0.2s;
   }
   nav a.nav-cta:hover { background: var(--accent-dark); }
+  /* Nav apply link */
 
   /* HERO */
   #hero {
@@ -708,6 +709,216 @@
   .hero-ctas { animation: fadeUp 0.6s 0.3s ease both; }
   .hero-stats { animation: fadeUp 0.6s 0.4s ease both; }
   .hero-visual { animation: fadeUp 0.8s 0.3s ease both; }
+
+  /* APPLICATION FORM */
+  #apply {
+    background: var(--black);
+    border-top: 1px solid var(--border);
+  }
+  .apply-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .apply-left h2 { margin-bottom: 1rem; }
+  .apply-left p {
+    font-size: 0.95rem;
+    color: rgba(245,242,237,0.55);
+    line-height: 1.85;
+    margin-bottom: 1.8rem;
+  }
+  .apply-proof {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .apply-proof-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: rgba(245,242,237,0.6);
+    line-height: 1.6;
+  }
+  .apply-proof-item .proof-icon {
+    width: 22px;
+    height: 22px;
+    background: rgba(200,64,42,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .apply-form-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+  .form-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .form-subtitle {
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    margin-bottom: 2rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.1rem;
+  }
+  .form-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(245,242,237,0.5);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(245,242,237,0.04);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6660' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }
+  .form-group select option { background: #1a1816; color: var(--white); }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(245,242,237,0.2); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: rgba(200,64,42,0.5);
+    background: rgba(200,64,42,0.04);
+  }
+  .form-group textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+
+  /* Radio groups */
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+    background: rgba(245,242,237,0.04);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    font-size: 0.92rem;
+    color: rgba(245,242,237,0.75);
+  }
+  .radio-option:hover {
+    border-color: rgba(200,64,42,0.35);
+    background: rgba(200,64,42,0.04);
+  }
+  .radio-option input[type="radio"] {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .radio-option:has(input:checked) {
+    border-color: rgba(200,64,42,0.5);
+    background: rgba(200,64,42,0.08);
+    color: var(--white);
+  }
+  .form-submit-wrap { margin-top: 0.5rem; }
+  .btn-apply {
+    width: 100%;
+    background: var(--accent);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn-apply:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-1px); }
+  .btn-apply:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .form-note {
+    font-size: 0.78rem;
+    color: rgba(245,242,237,0.3);
+    text-align: center;
+    margin-top: 0.9rem;
+  }
+  /* Status messages */
+  .form-status {
+    display: none;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  .form-status.success {
+    display: block;
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.25);
+    color: #86efac;
+  }
+  .form-status.error {
+    display: block;
+    background: rgba(200,64,42,0.1);
+    border: 1px solid rgba(200,64,42,0.25);
+    color: #f87171;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .apply-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .apply-form-wrap { padding: 1.8rem 1.4rem; }
+  }
 </style>
 </head>
 <body>
@@ -715,7 +926,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Beyond Performance<span>.</span></a>
-  <a href="#cta" class="nav-cta">Apply Now</a>
+  <a href="#apply" class="nav-cta">Apply Now</a>
 </nav>
 
 <!-- HERO -->
@@ -728,7 +939,7 @@
         I help individuals build muscle, lose fat, and move without pain — through evidence-based coaching and real lifestyle change. No gimmicks. No guesswork.
       </p>
       <div class="hero-ctas">
-        <a href="#cta" class="btn-primary">Apply for Coaching</a>
+        <a href="#apply" class="btn-primary">Apply for Coaching</a>
         <a href="#offer" class="btn-ghost">See What's Included</a>
       </div>
       <div class="hero-stats">
@@ -868,7 +1079,7 @@
         <div class="tier-suited">
           <span>Best suited for</span> Self-led clients who value structure, clarity, and autonomy with professional programming support.
         </div>
-        <a href="https://beyondperformance.netlify.app" target="_blank" class="tier-btn">Apply for Tier I</a>
+        <a href="#apply" class="tier-btn">Apply for Tier I</a>
       </div>
 
       <!-- TIER II -->
@@ -891,7 +1102,7 @@
         <div class="tier-suited">
           <span>Best suited for</span> Clients who want structured coaching, accountability, and expert decision-making throughout their training.
         </div>
-        <a href="https://beyondperformance.netlify.app" target="_blank" class="tier-btn tier-btn-accent">Apply for Tier II</a>
+        <a href="#apply" class="tier-btn tier-btn-accent">Apply for Tier II</a>
       </div>
 
       <!-- TIER III -->
@@ -914,7 +1125,7 @@
         <div class="tier-suited">
           <span>Best suited for</span> Clients who require close guidance, faster decision-making, and higher accountability to maximize results.
         </div>
-        <a href="https://beyondperformance.netlify.app" target="_blank" class="tier-btn">Apply for Tier III</a>
+        <a href="#apply" class="tier-btn">Apply for Tier III</a>
       </div>
 
     </div>
@@ -966,6 +1177,237 @@
   </div>
 </section>
 
+<!-- APPLICATION FORM -->
+<section id="apply">
+  <div class="section-inner">
+    <div class="apply-grid">
+      <!-- Left: copy -->
+      <div class="apply-left">
+        <div class="section-label">Apply for Coaching</div>
+        <h2>Let's See If We're a <em>Good Fit.</em></h2>
+        <p>This takes 2 minutes. Tell me where you're at, what's not working, and what you're after. If it looks like I can actually help, I'll reach out within 48 hours to set up a call — no pressure, no pitch.</p>
+        <div class="apply-proof">
+          <div class="apply-proof-item">
+            <div class="proof-icon">✓</div>
+            <span>Response within 48 hours</span>
+          </div>
+          <div class="apply-proof-item">
+            <div class="proof-icon">✓</div>
+            <span>Free strategy call if it's a good fit — no obligation</span>
+          </div>
+          <div class="apply-proof-item">
+            <div class="proof-icon">✓</div>
+            <span>Month-to-month, cancel anytime</span>
+          </div>
+          <div class="apply-proof-item">
+            <div class="proof-icon">✓</div>
+            <span>Science-based — no guesswork, no fads</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="apply-form-wrap">
+        <div class="form-title">Coaching Application</div>
+        <div class="form-subtitle">All fields help me give you a useful response — takes about 2 minutes.</div>
+
+        <div id="applyForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>What's your #1 goal right now?</label>
+            <div class="radio-group" id="goal">
+              <label class="radio-option"><input type="radio" name="goal" value="Build muscle and strength" required /><span>Build muscle and strength</span></label>
+              <label class="radio-option"><input type="radio" name="goal" value="Lose fat and get lean" /><span>Lose fat and get lean</span></label>
+              <label class="radio-option"><input type="radio" name="goal" value="Improve how I feel and move daily" /><span>Improve how I feel and move daily</span></label>
+              <label class="radio-option"><input type="radio" name="goal" value="All of the above" /><span>All of the above</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="activity">Current activity level</label>
+            <select id="activity" required>
+              <option value="" disabled selected>Select one...</option>
+              <option>Sedentary — little to no exercise</option>
+              <option>Lightly active — 1–2x/week</option>
+              <option>Moderately active — 3–4x/week</option>
+              <option>Very active — 5+ days/week</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="days">How many days per week can you train?</label>
+            <select id="days" required>
+              <option value="" disabled selected>Select one...</option>
+              <option>2 days</option>
+              <option>3 days</option>
+              <option>4 days</option>
+              <option>5 days</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Do you have gym access?</label>
+            <div class="radio-group" id="gym">
+              <label class="radio-option"><input type="radio" name="gym" value="Yes, full commercial gym" required /><span>Yes, full commercial gym</span></label>
+              <label class="radio-option"><input type="radio" name="gym" value="Home gym with equipment" /><span>Home gym with equipment</span></label>
+              <label class="radio-option"><input type="radio" name="gym" value="Minimal equipment at home" /><span>Minimal equipment at home</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="obstacle">What's held you back from results so far?</label>
+            <textarea id="obstacle" placeholder="Be honest — this helps me understand where you're actually at." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Are you ready to invest in yourself right now?</label>
+            <div class="radio-group" id="ready">
+              <label class="radio-option"><input type="radio" name="ready" value="Yes — I'm ready to commit" required /><span>Yes — I'm ready to commit</span></label>
+              <label class="radio-option"><input type="radio" name="ready" value="I need to know more first" /><span>I need to know more first</span></label>
+            </div>
+          </div>
+
+          <div class="form-submit-wrap">
+            <button class="btn-apply" id="submitBtn" type="button" onclick="submitApplication()">
+              <span id="btnText">Submit Application →</span>
+            </button>
+            <p class="form-note">No spam. Your info goes directly to Brenden — not a third party.</p>
+          </div>
+
+          <div class="form-status" id="formStatus"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+async function submitApplication() {
+  const btn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const statusEl = document.getElementById('formStatus');
+
+  // Gather values
+  const fullName   = document.getElementById('fullName').value.trim();
+  const email      = document.getElementById('email').value.trim();
+  const goal       = document.querySelector('input[name="goal"]:checked')?.value || '';
+  const activity   = document.getElementById('activity').value;
+  const days       = document.getElementById('days').value;
+  const gym        = document.querySelector('input[name="gym"]:checked')?.value || '';
+  const obstacle   = document.getElementById('obstacle').value.trim();
+  const ready      = document.querySelector('input[name="ready"]:checked')?.value || '';
+
+  // Basic validation
+  if (!fullName || !email || !goal || !activity || !days || !gym || !obstacle || !ready) {
+    statusEl.className = 'form-status error';
+    statusEl.textContent = 'Please fill in all fields before submitting.';
+    return;
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    statusEl.className = 'form-status error';
+    statusEl.textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  btn.disabled = true;
+  btnText.textContent = 'Sending...';
+  statusEl.className = 'form-status';
+
+  const RESEND_API_KEY = 're_YTN6jXK8_NiRdX6NMHMss7dWWpwL7fhQM'; // ← Replace with your Resend API key
+
+  try {
+    // 1) Notify you
+    const notifyRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Beyond Performance <onboarding@resend.dev>',
+        to: ['beyondperformancefit@gmail.com'],
+        subject: `New Coaching Application — ${fullName}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0d0d0d;color:#f5f2ed;padding:2rem;border-radius:10px;">
+            <h2 style="color:#c8402a;font-size:1.3rem;margin-bottom:1.5rem;">New Coaching Application</h2>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);width:38%;font-size:0.85rem;">Name</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${fullName}</td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;">Email</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);"><a href="mailto:${email}" style="color:#c8402a;">${email}</a></td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;">#1 Goal</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${goal}</td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;">Activity Level</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${activity}</td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;">Days/Week</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${days}</td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;">Gym Access</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${gym}</td></tr>
+              <tr><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(245,242,237,0.5);font-size:0.85rem;vertical-align:top;">What's Held Them Back</td><td style="padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">${obstacle}</td></tr>
+              <tr><td style="padding:0.6rem 0;color:rgba(245,242,237,0.5);font-size:0.85rem;">Ready to Invest</td><td style="padding:0.6rem 0;">${ready}</td></tr>
+            </table>
+            <p style="margin-top:1.5rem;font-size:0.82rem;color:rgba(245,242,237,0.3);">Submitted via beyondperformance.netlify.app</p>
+          </div>
+        `
+      })
+    });
+
+    // 2) Auto-reply to applicant
+    const replyRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Brenden @ Beyond Performance <onboarding@resend.dev>',
+        to: [email],
+        subject: 'Got your application — talk soon.',
+        html: `
+          <div style="font-family:sans-serif;max-width:580px;margin:0 auto;background:#0d0d0d;color:#f5f2ed;padding:2rem 2.5rem;border-radius:10px;">
+            <p style="font-family:serif;font-size:1.5rem;font-weight:700;color:#c8402a;margin-bottom:1.5rem;">Beyond Performance.</p>
+            <p style="line-height:1.8;margin-bottom:1rem;">Hey ${fullName.split(' ')[0]},</p>
+            <p style="line-height:1.8;margin-bottom:1rem;color:rgba(245,242,237,0.8);">Got your application — I appreciate you taking the time to fill it out honestly. I read every one of these personally.</p>
+            <p style="line-height:1.8;margin-bottom:1rem;color:rgba(245,242,237,0.8);">I'll be in touch within <strong style="color:#f5f2ed;">48 hours</strong>. If it looks like a good fit, I'll reach out to schedule a free 20-minute call. No pressure, no pitch — just a conversation to make sure we're aligned before we start.</p>
+            <p style="line-height:1.8;margin-bottom:1.5rem;color:rgba(245,242,237,0.8);">In the meantime, if you have questions, reply directly to this email.</p>
+            <p style="line-height:1.8;margin-bottom:0.3rem;">Let's get to work.</p>
+            <p style="line-height:1.8;color:rgba(245,242,237,0.6);">— Brenden</p>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:2rem 0;" />
+            <p style="font-size:0.78rem;color:rgba(245,242,237,0.25);line-height:1.6;">Beyond Performance · Science-based coaching · Dallas, TX<br/>Questions? <a href="mailto:beyondperformancefit@gmail.com" style="color:#c8402a;">beyondperformancefit@gmail.com</a></p>
+          </div>
+        `
+      })
+    });
+
+    if (notifyRes.ok && replyRes.ok) {
+      statusEl.className = 'form-status success';
+      statusEl.innerHTML = '✓ Application submitted. Check your email for a confirmation — I\'ll be in touch within 48 hours.';
+      // Clear form
+      document.getElementById('fullName').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('obstacle').value = '';
+      document.getElementById('activity').selectedIndex = 0;
+      document.getElementById('days').selectedIndex = 0;
+      document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+      btn.disabled = false;
+      btnText.textContent = 'Submit Application →';
+    } else {
+      throw new Error('Send failed');
+    }
+
+  } catch (err) {
+    statusEl.className = 'form-status error';
+    statusEl.innerHTML = 'Something went wrong. Please email <a href="mailto:beyondperformancefit@gmail.com" style="color:#f87171;">beyondperformancefit@gmail.com</a> directly or try again.';
+    btn.disabled = false;
+    btnText.textContent = 'Submit Application →';
+  }
+}
+</script>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="section-inner">
@@ -1006,7 +1448,7 @@
     <div class="section-label">Ready to Start?</div>
     <h2>You Don't Lack Commitment. You Just Don't Have the <em>Right Plan.</em></h2>
     <p>Apply today and let's fix that. If we're a good fit, we'll book a call and build your plan from the ground up — no fluff, no hard sell, just real results.</p>
-    <a href="https://beyondperformance.netlify.app" target="_blank" class="btn-primary" style="font-size: 1.05rem; padding: 1.1rem 2.8rem;">Apply for Coaching →</a>
+    <a href="#apply" class="btn-primary" style="font-size: 1.05rem; padding: 1.1rem 2.8rem;">Apply for Coaching →</a>
   </div>
 </section>
 
